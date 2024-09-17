@@ -25,6 +25,12 @@
         var n2 = Number(window.prompt("Preciso de um segundo numero"))
         var r = n1 + n2
         window.alert ("A soma dos dois numeros informados é: " + String(r))
+    /*ao invez de usar assim, é melhor usar `crases` 
+    e o simbolo ${}, para contatenar variaveis no meio do codigo assim:*/
+        var nome = window.prompt("Qual seu nome?")
+        window.alert (`Bem vindo(a) ${nome}! A soma dos dois numeros informados é: ${r}`)
+        /*desta forma vai ser o mesmo resultado, 
+        escrito de uma forma muito mais simples, do que se eu tivesse feito do outro jeito*/
     </script>
 </body>
 </html>
