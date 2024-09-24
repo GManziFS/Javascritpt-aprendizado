@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: rgb(42, 27, 53);
+            color: aliceblue;
+            text-align: center;
+        }
+
+    </style>
+    <title>DOM</title>
+</head>
+<body>
+    <div name="h1"><h1>Introdução ao <i>DOM</i></h1></div> <!-- aqui ja esta por name -->
+    <div ><p>Aqui o result</p></div>
+    <div id="query"><p>aprendendo <i>DOM</i></p></div>
+    <div id="botao">Clica ai</div> <!--aqui nessa div eu posso dar um ID pra ela para conseguir orienta-la futuramente-->
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1]
+        window.document.write(p1.innerHTML) /*aqui temos dois metodos de fazer isso um sendo esse "innerHTML" e o outro
+        sendo "innerText" sendo o primeiro copiando a tag do HTML e formataçao e o segundo somente o texto*/
+        var botao = window.document.getElementById('botao') //aqui é a manipulação do id botao
+        botao.style.background = 'purple'
+        botao.innerText = 'teste'
+        var h1 = window.document.getElementsByName('h1')[0] //ja aqui é para o nome, e o colchetes serve pra identificar qual o elemento que ele quer
+        var qyery = window.document.querySelector('div#query')//aqui para pegar qualquer tipo de seletor ent seria     id (#) class (.)
+    </script>
+</body>
+</html>
