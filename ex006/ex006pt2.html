@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div.area {
+            font: normal 10pt Arial;
+            background-color:rgb(233, 233, 233);
+            color: rgb(0, 0, 0);
+            width: 100;
+            height: 30px;
+            line-height: 30px;
+            text-align: start;
+            padding-left: 10px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+        body {
+            margin: 0;
+        }
+        div.area p {
+            margin: 0; 
+            padding: 0; 
+        }
+    </style>
+    <title>Cinza</title>
+</head>
+<body>
+    <div class="area"><p>Aqui tem uma info</p></div>
+    <div class="area"><p>Aqui tem outra</p></div>
+    <div class="area"><p>Blablablabla</p></div>
+    <div class="area"><p>Bla Bla Bla</p></div>
+    <script>
+        var areas = document.querySelectorAll('div.area')
+        areas.forEach(function(area) {
+            area.addEventListener('mouseenter', escurecer)
+            area.addEventListener('mouseout', clarear)
+        })
+        function escurecer(event) {
+            event.currentTarget.style.background = 'rgb(175, 175, 175)'
+        }
+        function clarear(event) {
+            event.currentTarget.style.background = 'rgb(233, 233, 233)'
+        }
+    </script>
+</body>
+</html>
