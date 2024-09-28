@@ -23,25 +23,52 @@
             margin: 0; 
             padding: 0; 
         }
+        .selecionada {
+            background-color: rgb(175, 175, 175);
+        }
     </style>
     <title>Cinza</title>
 </head>
+
 <body>
     <div class="area"><p>Aqui tem uma info</p></div>
     <div class="area"><p>Aqui tem outra</p></div>
     <div class="area"><p>Blablablabla</p></div>
     <div class="area"><p>Bla Bla Bla</p></div>
+
     <script>
         var areas = document.querySelectorAll('div.area')
         areas.forEach(function(area) {
             area.addEventListener('mouseenter', escurecer)
             area.addEventListener('mouseout', clarear)
+            area.addEventListener('click', selecione)
         })
+
         function escurecer(event) {
-            event.currentTarget.style.background = 'rgb(175, 175, 175)'
+            var div = event.currentTarget
+            if (div.classList.contains('selecionada')) {
+                div.style.background = 'rgb(150, 150, 150)'
+            } else {
+                div.style.background = 'rgb(175, 175, 175)'
+            }
         }
         function clarear(event) {
-            event.currentTarget.style.background = 'rgb(233, 233, 233)'
+            var div = event.currentTarget
+            if (div.classList.contains('selecionada')) {
+                div.style.background = 'rgb(175, 175, 175)'
+            } else {
+                div.style.background = 'rgb(233, 233, 233)'
+            }
+        }
+        function selecione(event) {
+            var div = event.currentTarget
+            if (div.classList.contains('selecionada')){
+                div.classList.remove('selecionada')
+                div.style.background = 'rgb(233, 233, 233)'
+            } else {
+                div.classList.add('selecionada')
+                div.style.background = 'rgb(175, 175, 175)'
+            }
         }
     </script>
 </body>
