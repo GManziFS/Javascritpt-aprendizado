@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        div#res {
+            margin-top: 20px;
+            color: rgba(95, 95, 95, 0.664);
+        }
+    </style>
+</head>
+<body>
+    <h1>Digite sua nacionalidade</h1>
+    <input type="text" name="nacionalidade" id="nac">
+    <input type="button" value="Verificar" id="ver">
+    <div id="res">Sua nacionalidade aparecera aqui</div>
+    <script>
+        var ver = document.querySelector('input#ver')
+
+        ver.addEventListener('click', verificar)
+
+        function verificar() {
+            var res = document.querySelector('div#res')
+            var nac = document.querySelector('input#nac').value.toLowerCase()
+
+            if(nac === 'br' || nac === 'bra' || nac === 'brasil' || nac === 'brasileiro' || 
+                nac === 'brazuca' || nac === 'bostil' || nac === 'brasileira' || 
+                nac === 'favelado' || nac === 'brazil'){
+                res.innerHTML = 'Vamoooo BRASILLL'
+            } else {
+                res.innerHTML = 'Que tipo de alien é voce?'
+            }
+        }
+    </script>
+</body>
+</html>
