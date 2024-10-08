@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(176, 250, 250);
+    background-color: rgb(155, 255, 160);
 }
 header{
     text-align: center;
@@ -16,8 +16,30 @@ section{
     justify-content: center;
 }
 div#box{
-    background-color: white;
+    background-color: rgb(254, 255, 218);
     border-radius: 10%;
     width: 700px;
     height: 500px;
+}
+div.container{
+    border-radius: 10%;
+    overflow: hidden;
+    height: 400px;
+    width: 600px;
+    padding-left: 50px;
+    padding-top: 25px;
+}
+img#img{
+    object-position:center ;
+    height: 400px;
+    width: 600px;
+    border-radius: 10%;
+    object-fit: cover;
+    object-position: 0% 20%;
+}
+div#texto{
+    font: normal 30pt sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
 }
